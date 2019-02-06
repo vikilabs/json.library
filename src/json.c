@@ -16,7 +16,7 @@ char *json_object_create()
 {
     char *json_obj_str = "{}";
     int len = strlen(json_obj_str) + 1;
-    char *json_object = (char*) calloc(SAFETY_BUFFER, sizeof(char));
+    char *json_object = (char*) calloc(len + SAFETY_BUFFER, sizeof(char));
 
     if(!json_object){
         return NULL;
@@ -39,7 +39,7 @@ char *json_array_create()
 {
     char *json_arr_str = "[]";
     int len = strlen(json_arr_str) + 1;
-    char *json_array = (char*) calloc(SAFETY_BUFFER, sizeof(char));
+    char *json_array = (char*) calloc(len + SAFETY_BUFFER, sizeof(char));
 
     if(!json_array){
         return NULL;

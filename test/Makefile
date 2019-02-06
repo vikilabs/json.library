@@ -14,3 +14,4 @@ all:
 	#Create Object File
 	$(CC) $(OPTIONS) $(SOURCE) $(INCLUDE) -o$(OBJECT)
 	./$(OBJECT)
+	rm -rf $(OBJECT)
